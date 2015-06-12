@@ -1,0 +1,1595 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ud",
+				"ud_t"
+			],
+			[
+				"use",
+				"user_data_t"
+			],
+			[
+				"port",
+				"port_str"
+			],
+			[
+				"sess",
+				"session_t"
+			],
+			[
+				"par",
+				"parse_dns_cb"
+			],
+			[
+				"user",
+				"user_data"
+			],
+			[
+				"set_reque",
+				"set_request_info"
+			],
+			[
+				"HTTP",
+				"HTTP_REQUEST"
+			],
+			[
+				"requ",
+				"request-"
+			],
+			[
+				"RB_",
+				"RB_FIND"
+			],
+			[
+				"h",
+				"host"
+			],
+			[
+				"data",
+				"data1"
+			],
+			[
+				"uv_str",
+				"uv_stream_t"
+			],
+			[
+				"g_qu",
+				"g_query_cdn_socket"
+			],
+			[
+				"g_s",
+				"g_query_cdn_socket"
+			],
+			[
+				"g_",
+				"g_query_cdn_socket"
+			],
+			[
+				"uv_",
+				"uv_shutdown_t"
+			],
+			[
+				"uv_shut",
+				"uv_shutdown_t"
+			],
+			[
+				"g_qy",
+				"g_query_cdn_shutdown_req"
+			],
+			[
+				"res",
+				"resolver"
+			],
+			[
+				"Qu",
+				"QUERY_CDN_DOMAIN"
+			],
+			[
+				"str",
+				"stream"
+			],
+			[
+				"uv_read",
+				"uv_read_stop"
+			],
+			[
+				"QUER",
+				"QUERY_CDN_PORT"
+			],
+			[
+				"uv_w",
+				"uv_write_t"
+			],
+			[
+				"g_que",
+				"g_query_cdn_write_req"
+			],
+			[
+				"send",
+				"send_buf"
+			],
+			[
+				"QU",
+				"QUERY_CDN_PORT"
+			],
+			[
+				"g_q",
+				"g_query_cdn_connect_req"
+			],
+			[
+				"rec",
+				"recv_len"
+			],
+			[
+				"recv_",
+				"recv_buf"
+			],
+			[
+				"send_",
+				"send_len"
+			],
+			[
+				"sin",
+				"sin_addr"
+			],
+			[
+				"dnspa",
+				"dnsparse_cb"
+			],
+			[
+				"uv",
+				"uv_stream_t"
+			],
+			[
+				"wwl_c",
+				"wwl_connect_cb"
+			],
+			[
+				"uv_t",
+				"uv_tcp_t"
+			],
+			[
+				"sockadd",
+				"sockaddr_in"
+			],
+			[
+				"p2",
+				"p2p_data_pipe"
+			],
+			[
+				"bu",
+				"buffer_len"
+			],
+			[
+				"comm",
+				"command_type"
+			],
+			[
+				"cmd",
+				"cmd_type"
+			],
+			[
+				"CAN",
+				"CANCEL_RESP"
+			],
+			[
+				"req",
+				"REQUEST_RESP"
+			],
+			[
+				"IN",
+				"INTERESTED_RESP"
+			],
+			[
+				"pro",
+				"probasepath"
+			],
+			[
+				"_par",
+				"_partner_id"
+			],
+			[
+				"quer",
+				"query_res_cmd"
+			],
+			[
+				"cid",
+				"cid_query_type"
+			],
+			[
+				"url",
+				"url_or_gcid"
+			],
+			[
+				"xl_p2p",
+				"xl_p2p_engine_covert_taskid"
+			],
+			[
+				"D",
+				"D_LOGGER"
+			],
+			[
+				"DD",
+				"DUPLOAD_ENABLE"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"ds_all",
+				"ds_alloc_for_pipe"
+			],
+			[
+				"p_data",
+				"p_data_pipe-"
+			],
+			[
+				"buf",
+				"bufferLen"
+			],
+			[
+				"u",
+				"uint64"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/lq-kaixin/work/study/libuv/test.c",
+			"settings":
+			{
+				"buffer_size": 1783,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jni/test/test.c",
+			"settings":
+			{
+				"buffer_size": 1267,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jni/uv/uv.h",
+			"settings":
+			{
+				"buffer_size": 79738,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 8 files for \"uv_last_error\"\n\n0 matches\n\nSearching 57 files for \"uv_last_error\"\n\n/home/lq-kaixin/work/study/p2p_study/jni/fs/test.c:\n   16      uv_fs_req_cleanup(req);\n   17      if (req->result < 0) {\n   18:         fprintf(stderr, \"Read error: %s\\n\", uv_strerror(uv_last_error(uv_default_loop())));\n   19      }\n   20      else if (req->result == 0) {\n   ..\n   31      uv_fs_req_cleanup(req);\n   32      if (req->result < 0) {\n   33:         fprintf(stderr, \"Write error: %s\\n\", uv_strerror(uv_last_error(uv_default_loop())));\n   34      }\n   35      else {\n\n2 matches in 1 file\n\n\nSearching 57 files for \"uv_last_error\"\n\n/home/lq-kaixin/work/study/p2p_study/jni/fs/test.c:\n   16      uv_fs_req_cleanup(req);\n   17      if (req->result < 0) {\n   18:         fprintf(stderr, \"Read error: %s\\n\", uv_strerror(uv_last_error(uv_default_loop())));\n   19      }\n   20      else if (req->result == 0) {\n   ..\n   31      uv_fs_req_cleanup(req);\n   32      if (req->result < 0) {\n   33:         fprintf(stderr, \"Write error: %s\\n\", uv_strerror(uv_last_error(uv_default_loop())));\n   34      }\n   35      else {\n\n2 matches in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 1132,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "jni/fs/test.c",
+			"settings":
+			{
+				"buffer_size": 1278,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jni/uv/uv-linux.h",
+			"settings":
+			{
+				"buffer_size": 1829,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/ndk-build.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"clea",
+				"Build: Clear"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"gitd",
+				"Git: Diff Current File"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"clear",
+				"Build: Clear"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pace",
+				"Package Control: Enable Package"
+			],
+			[
+				"pac",
+				"Package Control: Enable Package"
+			],
+			[
+				"toggle",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"lint",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"linter",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"toggie",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"bui",
+				"Build: Build"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 357.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lq-kaixin/work/study/p2p_study",
+		"/home/lq-kaixin/work/study/p2p_study/jni",
+		"/home/lq-kaixin/work/study/p2p_study/jni/fs",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test",
+		"/home/lq-kaixin/work/study/p2p_study/jni/tests",
+		"/home/lq-kaixin/work/study/p2p_study/jni/uv",
+		"/home/lq-kaixin/work/study/p2p_study/libs"
+	],
+	"file_history":
+	[
+		"/home/lq-kaixin/work/study/p2p_study/jni/uv/tree.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/tests/test_uv_map.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/tests/test_uv_map.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/Android.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/fs/Android.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/test.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/dns/dns.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/dns/dns.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/fs/test.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/uv/uv.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/socket/test_socket.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/socket/wwl_socket.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/dns.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/dns.h",
+		"/home/lq-kaixin/work/study/p2p_study/slog.config",
+		"/home/lq-kaixin/work/study/p2p_study/p2p-study.sublime-project",
+		"/home/lq-kaixin/work/study/p2p_study/jni/socket/wwl_socket_cb_handle.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/socket/wwl_socket_cb_handle.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/socket/wwl_socket.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/socket/test_socket.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/uv/uv-unix.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/http_request.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/http_request.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/http_session.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/uv/uv-win.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/socket/Android.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/log/log.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/test_http_request.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/test_http_request.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/cdn_queryer.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/Android.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/http_session.h",
+		"/host/study/p2p_study/jni/http_request/http_parser.c",
+		"/home/lq-kaixin/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/lq-kaixin/work/study/p2p_study/jni/http_request/http_parser.c",
+		"/home/lq-kaixin/.config/sublime-text-3/Packages/User/ndk-build.sublime-build",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/phub_queryer.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/Application.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/async_frame.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/http.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/tracker_queryer.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/tracker_queryer.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/test.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/phub_queryer.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/tests/tests.c",
+		"/home/lq-kaixin/work/study/p2p_study/jni/tests/Android.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/async_frame.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/cdn_queryer.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/res_query/Android.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/Android.mk",
+		"/home/lq-kaixin/work/study/p2p_study/jni/test/define.h",
+		"/home/lq-kaixin/work/study/p2p_study/jni/uv/Android.mk",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/common/logger.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/build/log.conf",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/5072/product_release/libdownloadengine.so.properties",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/task_manager/task_manager_2.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/task_manager/task_manager_interface.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/task_manager/task_manager_common.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/task_manager/task_manager.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/connect_manager/pipe_interface.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2sp_download/p2sp_query.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/common.vcproj",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/movie_manager/movie_manager_define.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/movie_manager/movie_manager.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/movie_manager/movie_manager.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/movie_manager/movie_manager_interface.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/etm/download_manager/download_task_data.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/etm/download_manager/download_task_store.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/etm/download_manager/download_task_interface.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/etm/download_manager/download_task_inner.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/etm/download_manager/download_task_impl.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/etm/download_manager/download_task_data.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/download_task/download_task.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/dispatcher/download_map.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/download_task/download_task.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/dispatcher/download_map.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/group/download_engine.mmp",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/download_engine.vcproj",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/dispatcher/dispatcher_interface.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/common/version.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/vod_data_manager/vod_data_manager_interface.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2sp_download/p2sp_common.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2sp_download/p2sp_task_2.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/p2sp_download/p2sp_task.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2sp_download/p2sp_task.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/p2sp_download/p2sp_task_2.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/common/map.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/src/common/map.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/p2p_transfer_layer/ptl_udp_device.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/p2p_transfer_layer/ptl_utility.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/common/errcode.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2p_data_pipe/p2p_cmd_define.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/p2p_data_pipe/p2p_pipe_interface.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/Android.mk",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/src/asyn_frame/device_handler.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/.tags_sorted_by_file",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2p_data_pipe/p2p_data_pipe.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/etm/build_em/et_task_manager.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/et_task_manager.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/connect_manager/connect_manager_imp.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/connect_manager/connect_filter_manager.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/common/define_const_num.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/src/common/peer_capability.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/obj/local/armeabi/objs/common/src/common/slog.o.d",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/src/common/slog.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/asyn_frame/device_handler.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/asyn_frame/device.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/common/include/common/define.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2p_data_pipe/p2p_pipe_interface.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/p2p_data_pipe/p2p_pipe_impl.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/include/connect_manager/new_connect_info.h",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/connect_manager/new_connect.c",
+		"/home/lq-kaixin/work/downloadengine/android/ios_merge-2.14-test-p2p/jni/downloadengine/src/dispatcher/new_dispatcher_interface.c",
+		"/home/lq_kaixin/.config/sublime-text-3/Packages/User/SVN.errors.log",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/etm/em_common/em_errcode.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/obj/local/armeabi/objs/common/src/common/errcode.o.d",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/public_include/em_errcode.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/public_include/errcode.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/common/src/common/errcode.c",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/et_task_manager.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/public_include/et_task_manager.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/etm/download_manager/download_task_data.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/src/etm/build_em/et_task_manager.c",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/obj/local/armeabi/objs/downloadengine/src/etm/download_manager/mini_task_interface.o.d",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/src/etm/download_manager/mini_task_interface.c",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/etm/download_manager/mini_task_interface.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/etm/em_interface/em_task.h",
+		"/home/lq_kaixin/java/downloadengine/android/dongman/jni/downloadengine/include/etm_interface.h"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 123.0,
+		"where_history":
+		[
+			"/home/lq-kaixin/work/study/p2p_study/jni/",
+			"/home/lq-kaixin/work/study/p2p_study/jni/res_query",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"uv_last_error",
+			"uv_fs_cb",
+			"uv_idle_start",
+			"uv_shutdown",
+			"uv_stream_t",
+			"\"\n",
+			"UV_EOF",
+			"    recv_buf[recv_len] = '\\0';\nUV_EOF",
+			"connect_by_ip",
+			"parse_dns",
+			"uv_connect_t",
+			"_int32",
+			"col",
+			"_u32",
+			"_int32",
+			"uv_shutdown_cb",
+			"uv_buf_t",
+			"uv_alloc_cb",
+			"c",
+			"Android",
+			"uv_connect_cb",
+			"uv_tcp_connect",
+			"close",
+			"shutdown",
+			"uv_read_cb",
+			"start_read",
+			"uv_tcp_",
+			"send",
+			"tcp_send",
+			"send",
+			"uv_send",
+			"uv_getaddrinfo",
+			"fs_write",
+			"cm_init_connect_manager",
+			"cm_init_filter_manager",
+			"gcm_is_global_strategy",
+			"log",
+			"POS_VALID",
+			"get_android_system_info",
+			"alloc_p2sp_task",
+			"ptl_create_udp_device",
+			"ptl_create_passive_connect",
+			"pt_start_query_phub_tracker_cdn",
+			"ulm_get_pipe_info_array",
+			"upload_enable",
+			"TASK_S_VOD",
+			"VOD_DATA_FINISHED",
+			"dt_get_running_vod_task_num",
+			"log",
+			"http_resource_reset_redirect_url",
+			"vod_http_pipe_create_imp",
+			"HTTP_DATA_PIPE_CONNECT_HANDLE_LISTENER",
+			"notify_vod_http_data_pipe_connect_handle_request_resp",
+			"range_list_get_rand_node",
+			"ds_start_dispatcher_immediate, timer ",
+			"tab",
+			"dt_add_server_resource",
+			"vdm_vod_read_data",
+			"vdm_vod_async_read_file_new",
+			"file_name",
+			"_last_recv_data_time",
+			"tab",
+			"etm_create_vod_task",
+			"width",
+			"_LOGGER",
+			"p2p_pipe_interface.h",
+			"try",
+			"try_to_check_piece(",
+			"whitespa",
+			"sd_srand",
+			"ptl_get_peersn, peerid ",
+			"p2p_socket_device_connect_callback, errcode ",
+			"ptl_connect_callback",
+			"ERR_P2P_CONNECT_FAILED",
+			"ptl_send_get_peersn_cmd",
+			"socket_proxy_sendto_by_domain",
+			"socket_proxy_sendto_dns_notify",
+			"ERR_P2P_CONNECT_FAILED",
+			"ACTIVE_UDT_CONN",
+			"p2p_socket_device_connect_callback, errcode = ",
+			"file_info_notify_check",
+			"ds_load_cfg",
+			"timer",
+			"ds_handle_recv_data",
+			"dt_notify_recv_data",
+			"dm_put_data",
+			"dt_notify_recv_data",
+			"pi_put_data",
+			"zengyu",
+			"zen",
+			"zengyu",
+			"_peer_capability",
+			"g_add_peer_res",
+			"dt_add_peer_resource",
+			"cm_add_active_peer_resource",
+			"cm_add_p2p_resource",
+			"set_peer_capability",
+			"sd_set_net_type",
+			"g_net_type",
+			"net_type",
+			"then",
+			"dm_put_data",
+			"pi_pipe_change_range",
+			"pi_pipe_change_ranges",
+			"pi_get_file_index",
+			"/'`"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"int",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/lq-kaixin/work/study/libuv/test.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1217,
+								1217
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "jni/test/test.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1151,
+								1151
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "jni/uv/uv.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 79738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63759,
+								63759
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 31838.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1132,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										274,
+										287
+									],
+									[
+										502,
+										515
+									],
+									[
+										816,
+										829
+									],
+									[
+										1044,
+										1057
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								820,
+								820
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "jni/fs/test.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								400,
+								400
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "jni/uv/uv-linux.h",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1539,
+								1539
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 268.0
+	},
+	"output.find_results":
+	{
+		"height": 184.0
+	},
+	"output.git":
+	{
+		"height": 142.0
+	},
+	"pinned_build_system": "Packages/User/ndk-build.sublime-build",
+	"project": "p2p-study.sublime-project",
+	"replace":
+	{
+		"height": 114.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"cmd",
+				"cmd_map.txt"
+			],
+			[
+				"log",
+				"jni/common/include/common/logid.h"
+			],
+			[
+				"task",
+				"jni/downloadengine/include/task_manager/task_manager_interface.h"
+			],
+			[
+				"p2sp",
+				"jni/downloadengine/include/p2sp_download/p2sp_task_2.h"
+			],
+			[
+				"p2sp_quer",
+				"jni/downloadengine/src/p2sp_download/p2sp_query.c"
+			],
+			[
+				"connec",
+				"jni/downloadengine/include/connect_manager/connect_manager_interface.h"
+			],
+			[
+				"slog",
+				"jni/common/src/common/slog.c"
+			],
+			[
+				"const",
+				"jni/common/include/common/define_const_num.h"
+			],
+			[
+				"movie",
+				"jni/downloadengine/include/movie_manager/movie_manager_interface.h"
+			],
+			[
+				"movie_man",
+				"jni/downloadengine/include/movie_manager/movie_manager_interface.h"
+			],
+			[
+				"download",
+				"jni/downloadengine/include/etm/download_manager/download_task_store.h"
+			],
+			[
+				"version",
+				"jni/common/src/common/version.c"
+			],
+			[
+				"p2sp_tas",
+				"jni/downloadengine/src/p2sp_download/p2sp_task_2.c"
+			],
+			[
+				"query",
+				"jni/downloadengine/src/p2sp_download/p2sp_query.c"
+			],
+			[
+				"et_task",
+				"jni/downloadengine/include/et_task_manager.h"
+			],
+			[
+				"con",
+				"jni/downloadengine/include/connect_manager/connect_manager_interface.h"
+			],
+			[
+				"device_han",
+				"jni/common/src/asyn_frame/device_handler.c"
+			],
+			[
+				"p2p_pipe_in",
+				"jni/downloadengine/src/p2p_data_pipe/p2p_pipe_interface.c"
+			],
+			[
+				"new",
+				"jni/downloadengine/src/connect_manager/new_connect.c"
+			],
+			[
+				"new_",
+				"jni/downloadengine/src/dispatcher/new_dispatcher_interface.c"
+			],
+			[
+				"p2p_data",
+				"jni/downloadengine/include/p2p_data_pipe/p2p_data_pipe.h"
+			],
+			[
+				"err",
+				"jni/downloadengine/include/etm/em_common/em_errcode.h"
+			],
+			[
+				"task_man",
+				"jni/downloadengine/src/task_manager/task_manager.c"
+			],
+			[
+				"et_tas",
+				"jni/downloadengine/src/etm/build_em/et_task_manager.c"
+			],
+			[
+				"vod",
+				"jni/downloadengine/src/vod_data_manager/vod_data_manager_interface.c"
+			],
+			[
+				"task_manager_com",
+				"jni/downloadengine/src/task_manager/task_manager_common.c"
+			],
+			[
+				"http_re",
+				"jni/downloadengine/include/http_data_pipe/http_resource.h"
+			],
+			[
+				"build",
+				"jni/downloadengine/include/connect_manager/pipe_function_table_builder.h"
+			],
+			[
+				"resource",
+				"jni/downloadengine/src/http_data_pipe/http_resource.c"
+			],
+			[
+				"vod_htt",
+				"jni/downloadengine/src/http_data_pipe/vod_http_data_pipe.c"
+			],
+			[
+				"",
+				"jni/downloadengine/include/http_data_pipe/http_resource.h"
+			],
+			[
+				"builder",
+				"jni/downloadengine/include/connect_manager/pipe_function_table_builder.h"
+			],
+			[
+				"range",
+				"jni/common/include/common/range.h"
+			],
+			[
+				"define",
+				"jni/common/include/common/define.h"
+			],
+			[
+				"et_task_man",
+				"jni/downloadengine/src/etm/build_em/et_task_manager.c"
+			],
+			[
+				"p2p_socket_device_imp",
+				"jni/downloadengine/src/p2p_data_pipe/p2p_socket_device_imp.c"
+			],
+			[
+				"down",
+				"jni/downloadengine/src/download_task/download_task.c"
+			],
+			[
+				"dis",
+				"jni/downloadengine/src/dispatcher/dispatcher_interface.c"
+			],
+			[
+				"vod_data",
+				"jni/downloadengine/src/vod_data_manager/vod_data_manager_interface.c"
+			],
+			[
+				"data_man",
+				"jni/downloadengine/src/data_manager/data_manager_intereface.c"
+			],
+			[
+				"pipe_int",
+				"jni/downloadengine/include/connect_manager/pipe_interface.h"
+			],
+			[
+				"data",
+				"jni/downloadengine/include/connect_manager/data_pipe.h"
+			],
+			[
+				"pipe",
+				"jni/downloadengine/include/connect_manager/pipe_interface.h"
+			],
+			[
+				"pool",
+				"jni/common/src/common/mempool.c"
+			],
+			[
+				"pipi",
+				"jni/downloadengine/include/connect_manager/pipe_interface.h"
+			],
+			[
+				"et",
+				"jni/downloadengine/include/et_task_manager.h"
+			],
+			[
+				"xl",
+				"jni/downloadengine/src/etm/build_em/xl_p2p_engine.c"
+			],
+			[
+				"xl_",
+				"jni/downloadengine/include/xl_p2p_engine.h"
+			],
+			[
+				"xl_p2p",
+				"jni/downloadengine/src/etm/build_em/xl_p2p_engine.c"
+			],
+			[
+				"p2p_pipe",
+				"jni/downloadengine/include/p2p_data_pipe/p2p_pipe_interface.h"
+			],
+			[
+				"socket_prox",
+				"jni/downloadengine/src/socket_proxy/socket_proxy_interface.c"
+			],
+			[
+				"function",
+				"jni/downloadengine/src/connect_manager/pipe_function_table_builder.c"
+			],
+			[
+				"capi",
+				"jni/common/src/common/peer_capability.c"
+			],
+			[
+				"newco",
+				"jni/downloadengine/src/connect_manager/new_connect.c"
+			],
+			[
+				"file_info",
+				"jni/downloadengine/src/data_manager/file_info.c"
+			],
+			[
+				"new_ds",
+				"jni/downloadengine/src/dispatcher/new_dispatcher_interface.c"
+			],
+			[
+				"download_ta",
+				"downloadengine/src/download_task/download_task.c"
+			],
+			[
+				"pipe_inter",
+				"downloadengine/src/connect_manager/pipe_interface.c"
+			],
+			[
+				"xl_p",
+				"downloadengine/src/etm/build_em/xl_p2p_engine.c"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 58.0,
+		"last_filter": "uv_fs_open",
+		"selected_items":
+		[
+			[
+				"uv_fs_open",
+				"uv_fs_open"
+			]
+		],
+		"width": 440.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
