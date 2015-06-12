@@ -2,3 +2,8 @@ libuv-master.rar
 libuv-master
 .tags_sorted_by_file
 .tags
+*~
+*.a
+*.o
+*.d
+*.out
