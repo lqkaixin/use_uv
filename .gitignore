@@ -7,3 +7,4 @@ libuv-master
 *.o
 *.d
 *.out
+*.so
