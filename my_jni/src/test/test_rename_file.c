@@ -1,9 +1,11 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 
-int main(int argv, char *argc)
+
+int renamefile_test()
 {
     char newName[256]={'\0'};
     char oldName[256]={'\0'};
@@ -13,7 +15,7 @@ int main(int argv, char *argc)
     printf("Input the renamed filename:\n");
     scanf("%s", newName);
 
-    int f = open(oldName, O_RDWR|O_APPEND);
+    int f = open(oldName, O_RDWR | O_APPEND);
     if(f <= 0)
     {
         printf("open() error\n");
@@ -26,5 +28,5 @@ int main(int argv, char *argc)
     printf("Program End\n");
     write(f,"abc\n", 4);
     getchar();
-    return(0);
+    return 0;
 }

@@ -7,19 +7,6 @@
 static const char base[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 static char rebase[256];
 
-int test_base64()
-{ 
-    const char *t = "那个abcd你好吗，哈哈，ANMOL"; 
-    printf("\noriginal: %s\n", t); 
-    int j = strlen(t); 
-    char p[512] = {0};
-    char *enc = base64_encode(t, j, p, 512); 
-    printf("\nencoded : %s\n", enc); 
-    int len = strlen(enc); 
-    char *dec = base64_decode(enc, len, p, 512); 
-    printf("\ndecoded : %s\n", dec); 
-    return 0; 
-} 
 /* */ 
 char *base64_encode(const char* in, int in_len, char*out, int out_len)
 { 
@@ -82,4 +69,37 @@ char *base64_decode(const char* in, int in_len, char*out, int out_len)
     }
 
     return out; 
+}
+
+int str2hex(const char *in, int in_len, char *out, int out_len)
+{
+    if (out_len < in_len * 2) return -1;
+    int i, t;
+    for(i = 0; i < in_len; i++)
+    {
+        t = (in[i] >> 4)&0xf;
+        if (t<10) out[(i<<1)] = '0' + t;
+        else out[(i<<1)] = 'A' + t - 10;
+
+        t = in[i]&0xf;
+        if (t<10) out[(i<<1)+1] = '0' + t;
+        else out[(i<<1)+1] = 'A' + t - 10;
+    }
+    return 0;
+}
+int hex2str(const char *in, int in_len, char *out, int out_len)
+{
+    if (in_len&1 || out_len < (in_len>>1)) return -1;
+    int i;
+    for (i = 0; i < in_len; ++i)
+    {
+        if (in[i] >= '0' && in[i] <= '9')
+            out[i>>1] = (out[i>>1]<<4) + in[i] - '0';
+        else if (in[i] >= 'a' && in[i] <= 'z')
+            out[i>>1] = (out[i>>1]<<4) + in[i] - 'a' + 10;
+        else if (in[i] >= 'A' && in[i] <= 'Z')
+            out[i>>1] = (out[i>>1]<<4) + in[i] - 'A' + 10;
+        else return -1;
+    }
+    return 0;
 }

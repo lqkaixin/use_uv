@@ -4,5 +4,27 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"SublimeLinter":
+	{
+		"linters":
+		{
+			"clang":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				],
+				"extra_flags": "-MD -O2 -DLINUX -D_ANDROID_LINUX -DMOBILE_PHONE -D_LOGGER -D_VOD_MEM_20M -DENABLE_KANKAN_CDN -D_CONNECT_DETAIL",
+				"include_dirs":
+				[
+					"${project}/my_jni/src/tools",
+					"${project}/my_jni/src/utility"
+				]
+			}
+		}
+	}
 }

@@ -112,7 +112,7 @@ bool MD5::md5_file(char * file_path)
 {
 	reset();
 	unsigned char buff[1024];
-	int len = 0, read_len = 0;
+	int read_len = 0;
 	FILE * f = fopen(file_path, "rb");
 	if (f == NULL)
 	{
@@ -201,7 +201,7 @@ int in_args(int argc, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	char op[10] = {0}, arg[1024] = {"a"};
+	char arg[1024] = {"a"};
 	
 	
 	MD5 md5;
