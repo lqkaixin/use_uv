@@ -56,23 +56,23 @@ int notify_bt_announce_list(std::string &key, void*value, int v_t, void *ud, voi
 int notify_bt_files(std::string &key, void*value, int v_t, void *ud, void **next_cb, void **next_ud);
 
 
-int notify_bt_root(std::string &key, void*value, int v_t, void *ud, void **next_cb, void **next_ud)
+#define AA (*(std::string*)value)
+void out_put(std::string pre, std::string &key, void*value, int v_t, void *ud)
 {
 	if (cb_out){
-		std::cerr << "root ud: "  << ", [" << key<<": ";
-		if(v_t == T_INT) std::cerr<<*(int*)value;
-		else if (v_t == T_STR)
-		{
-	#define AA (*(std::string*)value)
-			if (AA.length()>500 || AA.length()==20 || AA.length()==16)
-				std::cerr<<AA.length();
-			else std::cerr<<AA;
-		}
-		else if (v_t == T_DIC)std::cerr<<"-dic";
-		else if (v_t == T_LST)std::cerr<<"-list";
+		std::cerr << pre << " ud: "  << ", [" << key<<": ";
+		if      (v_t == T_INT_D || v_t == T_INT_L) std::cerr<<*(int*)value;
+		else if (v_t == T_STR_D || v_t == T_STR_L) std::cerr<<AA;
+		else if (v_t == T_DIC_D || v_t == T_DIC_L) std::cerr<<"-dic";
+		else if (v_t == T_LST_D || v_t == T_LST_L)std::cerr<<"-list";
 		std::cerr<<"]"<<std::endl;
 	}
-	// fprintf("ud: %p, %s: \n", ud, key.c_str());
+}
+
+
+int notify_bt_root(std::string &key, void*value, int v_t, void *ud, void **next_cb, void **next_ud)
+{
+	out_put("root", key, value, v_t, ud);
 
 	bt_info *info = (bt_info*)ud;
 
@@ -102,21 +102,9 @@ int notify_bt_root(std::string &key, void*value, int v_t, void *ud, void **next_
 
 int notify_bt_announce_list(std::string &key, void*value, int v_t, void *ud, void **next_cb, void **next_ud)
 {
-	if (cb_out){
-		std::cerr << " alist ud: "  << ", [" << key<<": ";
-		if(v_t == T_INT) std::cerr<<*(int*)value;
-		else if (v_t == T_STR)
-		{
-			if (AA.length()>500 || AA.length()==20 || AA.length()==16)
-				std::cerr<<AA.length();
-			else std::cerr<<AA;
-		}
-		else if (v_t == T_DIC)std::cerr<<"-dic";
-		else if (v_t == T_LST)std::cerr<<"-list";
-		std::cerr<<"]"<<std::endl;
-	}
+	out_put("announce_list", key, value, v_t, ud);
 
-	if (v_t == T_STR)
+	if (v_t == T_STR_L)
 	{
 		bt_info *info = (bt_info*)ud;
 		info->announce_list.push_back(AA);
@@ -126,19 +114,7 @@ int notify_bt_announce_list(std::string &key, void*value, int v_t, void *ud, voi
 
 int notify_bt_info(std::string &key, void*value, int v_t, void *ud, void **next_cb, void **next_ud)
 {
-	if (cb_out){
-		std::cerr << " info ud: "  << ", [" << key<<": ";
-		if(v_t == T_INT) std::cerr<<*(int*)value;
-		else if (v_t == T_STR)
-		{
-			if (AA.length()>500 || AA.length()==20 || AA.length()==16)
-				std::cerr<<AA.length();
-			else std::cerr<<AA;
-		}
-		else if (v_t == T_DIC)std::cerr<<"-dic";
-		else if (v_t == T_LST)std::cerr<<"-list";
-		std::cerr<<"]"<<std::endl;
-	}
+	out_put("info", key, value, v_t, ud);
 
 	bt_info *info = (bt_info*)ud;
 
@@ -165,26 +141,14 @@ int notify_bt_info(std::string &key, void*value, int v_t, void *ud, void **next_
 
 int notify_bt_files(std::string &key, void*value, int v_t, void *ud, void **next_cb, void **next_ud)
 {
-	if (cb_out){
-		std::cerr << "  files ud: "  << ", [" << key<<": ";
-		if(v_t == T_INT) std::cerr<<*(int*)value;
-		else if (v_t == T_STR)
-		{
-			if (AA.length()>500 || AA.length()==20 || AA.length()==16)
-				std::cerr<<AA.length();
-			else std::cerr<<AA;
-		}
-		else if (v_t == T_DIC)std::cerr<<"-dic";
-		else if (v_t == T_LST)std::cerr<<"-list";
-		std::cerr<<"]"<<std::endl;
-	}
+	out_put("files", key, value, v_t, ud);
 
 	bt_file *info = (bt_file*)ud;
 
 	if (key == "length") info->length = *(int*)value;
 	else if (key == "path")
 	{
-		if (v_t == T_STR) info->path = AA;
+		if (v_t == T_STR_L) info->path = AA;
 	}
 	else 
 	{
@@ -201,8 +165,8 @@ int get_n_bytes(char *buf, int len)
 {
 	if (fid == 0)
 	{
-		fid = open("/media/lq-kaixin/OS/tmp/ss/波多野結衣加勒比2011和服中出高清960×540/0FF035D6064716A80441B651CF009F437A12E23D.torrent", O_RDONLY,0);
-		// fid = open("/home/lq-kaixin/work/libuv_study/test.seed", O_RDONLY,0);
+		// fid = open("/media/lq-kaixin/OS/tmp/ss/波多野結衣加勒比2011和服中出高清960×540/0FF035D6064716A80441B651CF009F437A12E23D.torrent", O_RDONLY,0);
+		fid = open("../【BT天堂】【BTtiantang.com】[720p]恶魔之种.4.28GB.torrent", O_RDONLY,0);
 	}
 
 	if (len) read(fid, buf, len);
@@ -217,14 +181,119 @@ int get_n_bytes1(char *buf, int len)
 
 	if (total == 0) total = sizeof(p) -1;
 
-
 	memcpy(buf, p+pos, len);
 	pos += len;
 
-	char buff[1024] = {"echo "};
-	memcpy(buff+5, buf, len);
-	memcpy(buff+5+len," >>~/f.txt", strlen(" >>~/f.txt"));
-	system(buff);
+	return 0;
+}
+
+
+int notify_draw_json(std::string &key, void*value, int v_t, void *ud, void **next_cb, void **next_ud)
+{
+	static char esc[80] = {0};
+	static int pos = 0;
+	static int unneed_dot = 1;
+
+	std::cerr << "key: " <<key<<", "<<v_t<<"\n";
+	if (esc[1] == 0)
+	{
+		memset(esc, ' ' , sizeof(esc));
+		esc[0] = '\0';
+	}
+
+	if (v_t == T_DIC_D)
+	{
+		if (unneed_dot&1)
+			std::cout<<"\n"<<esc<<key<<": {";
+		else std::cout<<",\n"<<esc<<key<<": {";
+
+		esc[pos] = ' '; pos += 4;esc[pos]='\0';
+		unneed_dot = (unneed_dot<<1)+1;
+	}
+	else if (v_t == T_DIC_L)
+	{
+		if (key == "")
+		{
+			std::cout<<esc<<"{";
+		}
+		else 
+		{
+			if (unneed_dot&1)
+				std::cout<<"\n"<<esc<<"{";
+			else std::cout<<",\n"<<esc<<"{";
+		}
+
+		esc[pos] = ' '; pos += 4;esc[pos]='\0';
+		unneed_dot = (unneed_dot<<1)+1;
+	}
+	else if (v_t == T_DIC_E)
+	{
+		unneed_dot = (unneed_dot>>1);
+		pos -= 4; esc[pos] = '\0';
+		std::cout<<"\n"<<esc<<"}";
+		unneed_dot = (unneed_dot)&(-2);
+	}
+	else if (v_t == T_LST_D)
+	{
+		if (unneed_dot&1)
+			std::cout<<"\n"<<esc<<key<<": [";
+		else std::cout<<",\n"<<esc<<key<<": [";
+
+		esc[pos] = ' '; pos += 4;esc[pos]='\0';
+		unneed_dot = (unneed_dot<<1)+1;
+	}
+	else if (v_t == T_LST_L)
+	{
+		if (key == "")
+		{
+			std::cout<<esc<<"[";
+		}
+		else 
+		{
+			if (unneed_dot&1)
+				std::cout<<"\n"<<esc<<"[";
+			else std::cout<<",\n"<<esc<<"[";
+		}
+
+		esc[pos] = ' '; pos += 4;esc[pos]='\0';
+		unneed_dot = (unneed_dot<<1)+1;
+	}
+	else if (v_t == T_LST_E)
+	{
+		unneed_dot = (unneed_dot>>1);
+		pos -= 4; esc[pos] = '\0';
+		std::cout<<"\n"<<esc<<"]";
+		unneed_dot = (unneed_dot)&(-2);
+	}
+	else if (v_t == T_STR_D)
+	{
+		if (unneed_dot&1)
+			std::cout<<"\n"<<esc<<key<<": "<<AA;
+		else std::cout<<",\n"<<esc<<key<<": "<<AA;
+		unneed_dot = (unneed_dot)&(-2);
+	}
+	else if (v_t == T_INT_D)
+	{
+		if (unneed_dot&1)
+			std::cout<<"\n"<<esc<<key<<": "<<*(long long*)value;
+		else std::cout<<",\n"<<esc<<key<<": "<<*(long long*)value;
+
+		unneed_dot = (unneed_dot)&(-2);
+	}
+	else if (v_t == T_INT_L)
+	{
+		if (unneed_dot&1)
+			std::cout<<"\n"<<esc<<*(long long*)value;
+		else std::cout<<",\n"<<esc<<*(long long*)value;
+		unneed_dot = (unneed_dot)&(-2);
+	}
+	else if (v_t == T_STR_L)
+	{
+		if (unneed_dot&1)
+			std::cout<<"\n"<<esc<<AA;
+		else std::cout<<",\n"<<esc<<AA;
+		unneed_dot = (unneed_dot)&(-2);
+	}
 	return 0;
 }
 
@@ -241,7 +310,8 @@ int main(int argv, char *args[])
 	if (json_out)
 		cb_out = 0;
 
-	bson_parser parser(get_n_bytes1, json_out);
+	bson_parser parser(get_n_bytes, json_out);
+	// parser.start_parse(notify_draw_json, &b_info);
 	parser.start_parse(notify_bt_root, &b_info);
 
 	return 0;

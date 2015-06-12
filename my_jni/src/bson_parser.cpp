@@ -30,7 +30,7 @@ int bson_parser::start_parse(G_CB cb, void *ud)
 	// printf("%s\n", __FUNCTION__);
 	char type = 0;
 	get_n_bytes(&type, 1);
-	parse_type(type, T_K, cb, ud);
+	parse_type(type, T_L, cb, ud);
 
 	return 0;
 }
@@ -127,10 +127,6 @@ int bson_parser::parse_list(G_CB cb, void *ud)
 			break;
 		}
 
-		G_CB n_cb = cb;
-		void *n_ud = ud;
-		if (cb) cb(key, NULL, T_LST, ud, (void**)&n_cb, &n_ud);
-
 		if (f)
 		{
 			f = 0;
@@ -140,7 +136,7 @@ int bson_parser::parse_list(G_CB cb, void *ud)
 			if (json_out) printf(",\n");
 		}
 		// g_key = n_key;
-		parse_type(type, T_L, n_cb, n_ud);
+		parse_type(type, T_L, cb, ud);
 
 	}
 	return 0;
@@ -195,6 +191,7 @@ int bson_parser::parse_string(int pre)
 		}
 	}
 // if (pre)std::cerr << "\t" << pre<<"\t" <<str <<std::endl;
+	if (pre == T_V && str.size()>100) str = "too long!";
 	if (pre == T_K)
 		g_key = str;
 	else g_s_val = str;
@@ -209,22 +206,25 @@ int bson_parser::parse_type(char type, int pre, G_CB cb, void *ud)
 	if (type == 'i')
 	{
 		parse_int(pre);
-		if (pre != T_K && cb) cb(g_key, &g_i_val, T_INT, ud, NULL, NULL);
+		if (pre == T_V && cb) cb(g_key, &g_i_val, T_INT_D, ud, NULL, NULL);
+		if (pre == T_L && cb) cb(g_key, &g_i_val, T_INT_L, ud, NULL, NULL);
 	}
 	else if (type == 'd')
 	{
 		if (json_out)
 		{
-			if (!pre) printf("%s\n", "{");
+			if (pre == T_V) printf("%s\n", "{");
 			else printf("%s%s\n", esc, "{");
 			esc[idx++] = '\t';
 		}
 
 		G_CB n_cb = cb;
 		void *n_ud = ud;
-		if (pre == T_V && cb) cb(g_key, NULL, T_DIC, ud, (void**)&n_cb, &n_ud);
+		if (pre == T_V && cb) cb(g_key, NULL, T_DIC_D, ud, (void**)&n_cb, &n_ud);
+		if (pre == T_L && cb) cb(g_key, NULL, T_DIC_L, ud, (void**)&n_cb, &n_ud);
 
-		return parse_map(n_cb, n_ud);
+		parse_map(n_cb, n_ud);
+		if (cb) cb(g_key, NULL, T_DIC_E, ud, (void**)&n_cb, &n_ud);
 	}
 	else if (type == 'l')
 	{
@@ -237,14 +237,17 @@ int bson_parser::parse_type(char type, int pre, G_CB cb, void *ud)
 
 		G_CB n_cb = cb;
 		void *n_ud = ud;
-		// if (pre == 0) cb(g_key, NULL, ud, (void**)&n_cb, &n_ud);
+		if (pre == T_V && cb) cb(g_key, NULL, T_LST_D, ud, (void**)&n_cb, &n_ud);
+		if (pre == T_L && cb) cb(g_key, NULL, T_LST_L, ud, (void**)&n_cb, &n_ud);
 
-		return parse_list(n_cb, n_ud);
+		parse_list(n_cb, n_ud);
+		if (cb) cb(g_key, NULL, T_LST_E, ud, (void**)&n_cb, &n_ud);
 	}
 	else 
 	{
 		parse_string(pre);
-		if (pre != T_K && cb) cb(g_key, &g_s_val, T_STR, ud, NULL, NULL);
+		if (pre == T_V && cb) cb(g_key, &g_s_val, T_STR_D, ud, NULL, NULL);
+		if (pre == T_L && cb) cb(g_key, &g_s_val, T_STR_L, ud, NULL, NULL);
 
 	}
 }
