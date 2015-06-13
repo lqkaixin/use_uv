@@ -16,7 +16,7 @@ public:
 	virtual ~AES();
 	unsigned char* Cipher(unsigned char* input);
 	unsigned char* InvCipher(unsigned char* input);
-	void* Cipher(void* input, int length=0);
+	void* Cipher(void* input, int length);
 	void* InvCipher(void* input, int length);
 
 private:

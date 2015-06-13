@@ -97,4 +97,4 @@ public:
 DECLEAR_LOG(http_cdn_queryer)
 
 
-http_cdn_queryer ss;
+// http_cdn_queryer ss;
