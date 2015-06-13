@@ -37,7 +37,7 @@ void rc4_crypt(rc4_ctx *ctx, char *src, char *des, int len)
 	int k = 0;
 	for (k=0;k<len;k++)
 	{
-		updatestate();
+		updatestate(ctx);
 		des[k] = src[k]^ctx->S[(ctx->S[ctx->i]+ctx->S[ctx->j])%256];
 		LOG_DEBUG("[decode] src: %d, des: %d\n", src[k], des[k]);
 	}

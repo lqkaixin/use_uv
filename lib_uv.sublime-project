@@ -22,6 +22,7 @@
 				"include_dirs":
 				[
 					"${project}/my_jni/src/tools",
+					"${project}/my_jni/src/",
 					"${project}/my_jni/src/utility"
 				]
 			}

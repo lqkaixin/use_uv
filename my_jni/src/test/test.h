@@ -11,7 +11,8 @@ int rc4_test();
 
 int test_base64();
 
-void test_rg();
+int test_hub();
 
-int test_base64();
+
+void test_rg();
 

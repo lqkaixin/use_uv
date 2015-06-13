@@ -8,6 +8,6 @@ typedef struct rc4_ctx_t
 
 void rc4_init(rc4_ctx *ctx, char *key, int len);
 
-void updatestate();
+void updatestate(rc4_ctx *ctx);
 
 void rc4_crypt(rc4_ctx *ctx, char *src, char *des, int len);

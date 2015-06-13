@@ -1,3 +1,6 @@
+#ifndef HTTP_CONN
+#define HTTP_CONN
+
 #include "http_parser.h"
 #include "tcp_conn.h"
 
@@ -55,3 +58,5 @@ public:
     virtual void header_cb() = 0;
     virtual void body_cb(const char *data, int len) = 0;
 };
+
+#endif

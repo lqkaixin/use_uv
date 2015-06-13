@@ -1,4 +1,4 @@
-#include "http_conn.h"
+#include "hub_queryer.h"
 
 #include <string.h>
 
@@ -12,19 +12,13 @@ static const char url[1024] = "GET /getCdnresource_flv?gcid=0E3CE7A2ADC93B85C8E9
             "\r\n";
 
 
-class hub_queryer: public i_http_cb
-{
-    http_conn dev;
-
-public:
-    hub_queryer():dev(this)
+    hub_queryer::hub_queryer():dev(this)
     {
         dev.connect("p2s.cl.kankan.com", 80);
     }
 
-public:
-    virtual void conn_cb(){dev.send(url, strlen(url));}
-    virtual void header_cb(){}
-    virtual void body_cb(const char *data, int len){}
-};
+
+ void hub_queryer::conn_cb(){dev.send(url, strlen(url));}
+ void hub_queryer::header_cb(){}
+ void hub_queryer::body_cb(const char *data, int len){}
 

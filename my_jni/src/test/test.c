@@ -81,12 +81,12 @@ int xujilei_test()
 
 int lambda_test()
 {
-    int a[] = {5,3,4,1,2};
-    auto c = 0;
-    std::sort(a,a+5,[&c](int a,int b){c++;return a>b;});
-    for (int i=0;i<5;i++)
-        printf("%d \n", a[i]);
-    printf("%d\n", c);
+    // int a[] = {5,3,4,1,2};
+    // auto c = 0;
+    // std::sort(a,a+5,[&c](int a,int b){c++;return a>b;});
+    // for (int i=0;i<5;i++)
+    //     printf("%d \n", a[i]);
+    // printf("%d\n", c);
 }
 
 #endif
@@ -106,6 +106,7 @@ int main()
     TEST(crash_test);
     TEST(free_disk_test);
     TEST(rc4_test);
+    TEST(test_hub);
 
     END_TEST
     return 0;
