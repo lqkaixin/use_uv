@@ -1,51 +1,47 @@
-#ifndef MD5_H
-#define MD5_H
 
-#include <string>
-#include <string.h>
-#include <fstream>
-
-/* Type define */
-typedef unsigned char byte;
-typedef unsigned long ulong;
-
-using std::string;
-using std::ifstream;
-
-/* MD5 declaration. */
-class MD5 {
+class MD5
+{
 public:
+
 	MD5();
-	MD5(const void *input, size_t length);
-	MD5(const string &str);
-	MD5(ifstream &in);
-	void update(const void *input, size_t length);
-	void update(const string &str);
-	void update(ifstream &in);
-	const byte* digest();
-	string toString();
+	~MD5();
 	void reset();
-private:
-	void update(const byte *input, size_t length);
+
+	void update(unsigned char *str, int len);
 	void final();
-	void transform(const byte block[64]);
-	void encode(const ulong *input, byte *output, size_t length);
-	void decode(const byte *input, ulong *output, size_t length);
-	string bytesToHexString(const byte *input, size_t length);
 
-	/* class uncopyable */
-	MD5(const MD5&);
-	MD5& operator=(const MD5&);
+	void get_result(char out[]);
+	void get_hex_result(char out[]);
+	void out_put_result();
+
+	void md5_string(char *str, int len);
+	bool md5_file(char * file_path);
+
 private:
-	ulong _state[4];	/* state (ABCD) */
-	ulong _count[2];	/* number of bits, modulo 2^64 (low-order word first) */
-	byte _buffer[64];	/* input buffer */
-	byte _digest[16];	/* message digest */
-	bool _finished;		/* calculate finished ? */
+	void calc();
 
-	static const byte PADDING[64];	/* padding for calculate */
-	static const char HEX[16];
-	static const size_t BUFFER_SIZE = 1024;
+private:
+
+	static unsigned F(unsigned b, unsigned c, unsigned d);
+	static unsigned G(unsigned b, unsigned c, unsigned d);
+	static unsigned H(unsigned b, unsigned c, unsigned d);
+	static unsigned I(unsigned b, unsigned c, unsigned d);
+
+private:
+
+	//unsigned data[16] = {0x8061, 0,0,0,0,0,0,0,0,0,0,0,0,0,8,0};//"a"
+	unsigned data[16];
+	long long data_len;
+	unsigned result[4];
+	
+private:
+
+	static unsigned (* f[4])(unsigned b, unsigned c, unsigned d);
+	
+	static const unsigned PRE[4];
+	
+	static const unsigned data_idx[4][2];
+	static const unsigned s[4][4];
+	
+	static const unsigned t[64];
 };
-
-#endif/*MD5_H*/

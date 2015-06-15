@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"tre",
+				"TRUE"
+			],
+			[
+				"sr",
+				"src_len"
+			],
+			[
+				"mem",
+				"memcpy"
+			],
+			[
+				"out",
+				"out_len"
+			],
+			[
 				"BUFF",
 				"BUFF_TOO_SMALL	macro"
 			],
@@ -498,29 +514,13 @@
 			[
 				"use",
 				"user_ptr"
-			],
-			[
-				"sd",
-				"sd_free"
-			],
-			[
-				"MAP",
-				"MAP_NEXT"
-			],
-			[
-				"len",
-				"length"
-			],
-			[
-				"par",
-				"parser"
 			]
 		]
 	},
 	"buffers":
 	[
 	],
-	"build_system": "",
+	"build_system": "Packages/User/ndk-build.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -740,7 +740,7 @@
 	},
 	"console":
 	{
-		"height": 321.0,
+		"height": 231.0,
 		"history":
 		[
 			"print(a)",
@@ -760,10 +760,55 @@
 	},
 	"expanded_folders":
 	[
-		"/home/lq-kaixin/work/study/libuv"
+		"/home/lq-kaixin/work/libuv",
+		"/home/lq-kaixin/work/libuv/c",
+		"/home/lq-kaixin/work/libuv/c/include",
+		"/home/lq-kaixin/work/libuv/c/src",
+		"/home/lq-kaixin/work/libuv/my_jni",
+		"/home/lq-kaixin/work/libuv/my_jni/src",
+		"/home/lq-kaixin/work/libuv/my_jni/src/xl",
+		"/home/lq-kaixin/work/libuv/tttttmp"
 	],
 	"file_history":
 	[
+		"/home/lq-kaixin/work/libuv/my_jni/src/xl/shub_query.c",
+		"/home/lq-kaixin/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/lq-kaixin/.config/sublime-text-3/Packages/User/ndk-build.sublime-build",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_hub.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/xl/hub_queryer.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/http_conn.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/xl/hub_queryer.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test.c",
+		"/home/lq-kaixin/work/libuv/my_jni/Makefile",
+		"/home/lq-kaixin/work/libuv/my_jni/src/xl/http_cdn_queryer.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/xl/shub_query.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/rc4.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/utility/log.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/utility/define.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/base64.cpp",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/MD5.cpp",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/AES.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_base64.c",
+		"/home/lq-kaixin/work/libuv/lib_uv.sublime-project",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_rc4.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/base64.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/rc4.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/shub_query.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_free_disk.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_crash.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_rename_file.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_c_base.c",
+		"/home/lq-kaixin/work/libuv/c/src/rc4.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test/test_c_base.h",
+		"/home/lq-kaixin/work/libuv/test/test.c",
+		"/home/lq-kaixin/work/libuv/my_jni/src/bt_parser.cpp",
+		"/home/lq-kaixin/work/libuv/my_jni/src/test_export.c",
+		"/home/lq-kaixin/work/libuv/c/src/MD5.cpp",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/md5.cpp",
+		"/home/lq-kaixin/work/libuv/c/include/MD5.h",
+		"/home/lq-kaixin/work/libuv/my_jni/src/tools/md5.h",
+		"/home/lq-kaixin/work/libuv/c/filename.c",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/Android.mk",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/engine_interface_java.c",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/include/engine_interface_c.h",
@@ -794,7 +839,6 @@
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/etm/download_manager/download_task_data.c",
 		"/home/lq-kaixin/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/lq-kaixin/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/lq-kaixin/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/mediaplayer.sublime-project",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/data_manager/single_file.c",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/auto_unittest/range_test/range_test.c",
@@ -854,48 +898,11 @@
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/etm/download_manager/task_store_viewer.c",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/stream_media_http_server/http_connect_router.c",
 		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/include/xl_p2p_engine.h",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/data_manager/cache_manager.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/include/task_manager/task_manager.h",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/stream_media_http_server/connect_acceptor.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/stream_media_http_server/http_request.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/stream_media_http_server/http_authentication.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/stream_media_http_server/mveid_play_handle.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/stream_media_http_server/media_http_server_interface.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/movie_manager/movie_manager_post_function.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/stream_media_http_server/x_utility.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/include/stream_media_http_server/mveid_play_handle.h",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/socket_proxy/socket_proxy_interface.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/common/src/common/utility.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/common/include/android_interface/sd_android_log.h",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/res_query/dk_res_query/dk_setting.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/etm/download_manager/download_task_inner.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/build/embed_thunder.c",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/build/embed_thunder.h",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/include/etm/et_interface/embed_thunder.h",
-		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/res_query/res_query_interface.c",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/conf/trackerServer.conf",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/common/SDConfiguration.cpp",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/SDStorePeerOnlineTimeSingle.h",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/Media_server.cpp",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/Media_server.h",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/SDCommand.cpp",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/SDCommandType.h",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/P2PTrackerHandler.cpp",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/P2PTrackerHandler.h",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/p2pserver/P2PMediaMain.cpp",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingBack/trunk/p2pserver/P2PMediaMain.cpp",
-		"/home/lq-kaixin/work/servers/pingserver_code/pingServer/pingFront/trunk/[old] pingFront.IAB",
-		"/home/lq-kaixin/work/downloadengine/android/mediaplayer/jni/include/android/frameworks/av/media/libstagefright/MediaSource.cpp",
-		"/home/lq-kaixin/bin/crt.py",
-		"/home/lq-kaixin/work/downloadengine/android/mediaplayer/jni/tools/ffmpeg/libavformat/utils.c",
-		"/home/lq-kaixin/work/downloadengine/android/mediaplayer/jni/include/android/system/core/include/utils/RefBase.h",
-		"/home/lq-kaixin/work/downloadengine/android/mediaplayer/jni/include/android/system/core/include/utils/Thread.h",
-		"/home/lq-kaixin/work/downloadengine/android/mediaplayer/jni/libutils/Thread.cpp",
-		"/home/lq-kaixin/work/downloadengine/android/mediaplayer/jni/include/utils/Thread.h"
+		"/home/lq-kaixin/work/eclipse/mediaplayer/download_engine_http_server/jni/downloadengine/src/data_manager/cache_manager.c"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -910,6 +917,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"query_res_cmd",
+			"hub_queryer",
+			"conn->cb",
+			"cb",
+			"renamefile_test",
 			"JNIEXPORT",
 			"-[\\d]",
 			"get_order_list_array",
@@ -1032,19 +1044,15 @@
 			"include",
 			" \"",
 			"AndroidStagefright_start",
-			"mBufferedPosition",
-			"mPlaylist",
-			"changeSource",
-			"MEDIA_PLAYER_PLAYBACK_COMPLETE",
-			"prepareVideo",
-			"mSource"
+			"mBufferedPosition"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"cmd",
 			"ctrl+",
 			"llyy",
 			"int32 llyy",
@@ -1057,7 +1065,7 @@
 		"reverse": false,
 		"show_context": false,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
@@ -1123,7 +1131,7 @@
 	"project": "lib_uv.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1809,7 +1817,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 329.0,
+	"side_bar_width": 84.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

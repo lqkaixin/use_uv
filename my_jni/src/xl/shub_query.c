@@ -7,6 +7,7 @@
 #include "AES.h"
 
 #include "shub_query.h"
+#include "base64.h"
 
 char *g_buf;
 int g_len;
@@ -174,14 +175,14 @@ _int32 sd_set_int64_to_lt(char **buffer, _int32 *cur_buflen, _int64 value)
 		return -1;
 
 	char *t = *buffer;
-	*t++ = (value>>56)&0xff;
-	*t++ = (value>>48)&0xff;
-	*t++ = (value>>40)&0xff;
-	*t++ = (value>>32)&0xff;
-	*t++ = (value>>24)&0xff;
-	*t++ = (value>>16)&0xff;
-	*t++ = (value>> 8)&0xff;
 	*t++ = (value>> 0)&0xff;
+	*t++ = (value>> 8)&0xff;
+	*t++ = (value>>16)&0xff;
+	*t++ = (value>>24)&0xff;
+	*t++ = (value>>32)&0xff;
+	*t++ = (value>>40)&0xff;
+	*t++ = (value>>48)&0xff;
+	*t++ = (value>>56)&0xff;
 	*cur_buflen -= sizeof(value);
 	*buffer = t;
 
@@ -194,10 +195,10 @@ _int32 sd_set_int32_to_lt(char **buffer, _int32 *cur_buflen, _int32 value)
 		return -1;
 
 	char *t = *buffer;
-	*t++ = (value>>24)&0xff;
-	*t++ = (value>>16)&0xff;
-	*t++ = (value>> 8)&0xff;
 	*t++ = (value>> 0)&0xff;
+	*t++ = (value>> 8)&0xff;
+	*t++ = (value>>16)&0xff;
+	*t++ = (value>>24)&0xff;
 	*cur_buflen -= sizeof(value);
 	*buffer = t;
 
@@ -210,8 +211,8 @@ _int32 sd_set_int16_to_lt(char **buffer, _int32 *cur_buflen, _int16 value)
 		return -1;
 
 	char *t = *buffer;
-	*t++ = (value>> 8)&0xff;
 	*t++ = (value>> 0)&0xff;
+	*t++ = (value>> 8)&0xff;
 	*cur_buflen -= sizeof(value);
 	*buffer = t;
 
@@ -253,9 +254,11 @@ _int32 aes_encrypt(char* buffer,_u32* len)
 		return -1;
 	}
 
+	char b[16] = {0};
 	MD5 md5;
-	md5.update((void *)buffer, sizeof(_u32) * 2);
-	AES	aes((_u8*)md5.digest());
+	md5.md5_string(buffer, sizeof(_u32) * 2);
+	md5.get_result(b);
+	AES	aes((_u8*)b);
 
 	pre_len = sizeof(_u32)*3;
 	nOutLen = (*len - pre_len + 16)/16*16 + pre_len;
@@ -265,7 +268,7 @@ _int32 aes_encrypt(char* buffer,_u32* len)
 
 	char *tmp_buffer = buffer + sizeof(_u32) * 2;
 	_int32 tmplen = 4;
-    sd_set_int32_to_lt(&tmp_buffer, &tmplen, nOutLen);
+    sd_set_int32_to_lt(&tmp_buffer, &tmplen, nOutLen- pre_len);
 
 	*len = nOutLen;
 	return SUCCESS;
@@ -329,6 +332,7 @@ _int32 build_query_server_res_cmd(char** buffer, _u32* len, QUERY_SERVER_RES_CMD
 	ret = aes_encrypt(*buffer + http_header_len, len);
 
 	*len += http_header_len;
+
 	return SUCCESS;
 }
 
@@ -360,7 +364,7 @@ _int32 res_query_shub_by_cid(const _u8* cid, _u64 file_size, BOOL is_gcid, const
 	memset(&cmd, 0, sizeof(QUERY_SERVER_RES_CMD));
 
 	cmd._header._version = SHUB_PROTOCOL_VER;
-	cmd._header._seq = 1234;
+	cmd._header._seq = 123;
 
 	cmd._by_what = QUERY_BY_CID;
 	if(!need_bcid)
@@ -388,6 +392,7 @@ _int32 res_query_shub_by_cid(const _u8* cid, _u64 file_size, BOOL is_gcid, const
 	cmd._peerid_size = PEER_ID_SIZE;
 	get_peerid(cmd._peerid, PEER_ID_SIZE + 1);
 
+	cmd._cmd_type = QUERY_SERVER_RES;
 	cmd._file_size = file_size;
 	cmd._max_server_res = max_server_res;
 	cmd._bonus_res_num = bonus_res_num;
@@ -396,10 +401,21 @@ _int32 res_query_shub_by_cid(const _u8* cid, _u64 file_size, BOOL is_gcid, const
 	cmd._peer_report_ip = 0;//sd_get_local_ip();
 	cmd._peer_capability = get_peer_capability();
 	cmd._product_flag = get_product_flag();	
+
+	cmd._header._cmd_len = 60 + 
+				cmd._url_or_gcid_size +
+				cmd._cid_size +
+				cmd._origin_url_size +
+				cmd._peerid_size +
+				cmd._refer_url_size +
+				cmd._partner_id_size;
 	/*build command*/
 	char* buffer = NULL;
 	_u32  len = 0;
 	ret = build_query_server_res_cmd(&buffer, &len, &cmd);
+
+	g_buf = buffer;
+	g_len = len;
 	// CHECK_VALUE(ret);
 	// return res_query_commit_cmd(&g_shub, QUERY_SERVER_RES, buffer, len, (void*)handler, user_data, query_res_cmd._header._seq,TRUE);			//commit a request
 	return 0;
@@ -417,7 +433,7 @@ _int32 res_query_shub_by_url(const char* url, const char* refer_url,
 	memset(&cmd, 0, sizeof(cmd));
 
 	cmd._header._version = SHUB_PROTOCOL_VER;
-	cmd._header._seq = 1234;
+	cmd._header._seq = 123;
 
 	cmd._by_what = 0x00;
 	if(!need_bcid)
@@ -456,6 +472,8 @@ _int32 res_query_shub_by_url(const char* url, const char* refer_url,
 	_u32  len = 0;
 	ret = build_query_server_res_cmd(&buffer, &len, &cmd);
 
+	LOG_DEBUG("build cmd res: %d", ret);
+
 	g_buf = buffer;
 	g_len = len;
 	// CHECK_VALUE(ret);
@@ -471,14 +489,17 @@ int test_shub_query()
 	char url[] = "";
 	char ref_url[] = "";
 
-	res_query_shub_by_url(url, ref_url, need_bcid, max_server_res, bonus_res_num,
-							231, 1/*,BOOL not_add_res*/);
+	//res_query_shub_by_url(url, ref_url, need_bcid, max_server_res, bonus_res_num, 231, 1/*,BOOL not_add_res*/);
 
 	_u8 tcid[CID_SIZE] = {0}, gcid[CID_SIZE] = {0};
 	BOOL is_gcid = 0;
 
-	res_query_shub_by_cid(tcid, 0, is_gcid, DEFAULT_URL, need_bcid, max_server_res,
-			bonus_res_num, 231, 0);
+	hex2str("5339E62BE890ED1852DCB8BD4C01C6C2D9EDF9B5", 40, (char *)tcid, 20);
+
+	res_query_shub_by_cid(tcid, 34475476, is_gcid, "gvod://10.0.0.8:8080/5339E62BE890ED1852DCB8BD4C01C6C2D9EDF9B5/34475476/[激情] 苍井空 教师.rmvb", need_bcid, max_server_res,
+			bonus_res_num, 123, 0);
+
+	LOG_DEBUG("%d %s", g_len, g_buf);
 	return 0;
 }
 

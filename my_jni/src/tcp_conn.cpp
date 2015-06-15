@@ -105,7 +105,7 @@ tcp_conn::tcp_conn(i_tcp_cb *cb)
 
 int tcp_conn::connect(const char *domain, int port)
 {
-    uv_getaddrinfo(uv_default_loop(), &dns_req, getaddr_cb, "p2s.cl.kankan.com", NULL, NULL);
+    uv_getaddrinfo(uv_default_loop(), &dns_req, getaddr_cb, /*"p2s.cl.kankan.com"*/domain, NULL, NULL);
 }
 int tcp_conn::send(const char *data, int len)
 {

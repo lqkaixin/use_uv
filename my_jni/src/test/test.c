@@ -112,6 +112,84 @@ int main()
     return 0;
 }
 
+// int in_args(int argc, char *argv[])
+// {
+//     char arg[1024] = {0};
+
+//     int s = 0, e, idx = 0;
+//     while (idx < argc)
+//     {
+//         while (arg[s] == ' ') s++;
+//         if (arg[s] == '\0')
+//         {
+//             s = 0;
+//             gets(arg);
+//             continue;
+//         }
+//         e = s;
+//         if (arg[e] == '"' && ++s)
+//             while (arg[++e] != '"');
+//         else while (arg[e] != ' ' && arg[e] != '\0') e++;
+
+//         strncpy(argv[idx++], arg + s, e - s);
+//         if (arg[e] == '"') e ++;
+//         s = e;
+//     }
+//     return argc;
+// }
+
+// int mainsss(int argc, char *argv[])
+// {
+//     char arg[1024] = {"a"};
+    
+    
+//     MD5 md5;
+//     if (argc == 2)
+//     {
+//         // md5_file(argv[1]);
+//         md5.md5_file(argv[1]);
+//     }
+//     else if(argc == 3 && strcmp(argv[1], "-s")==0)
+//     {
+//         // md5_string(argv[2], strlen(argv[2]));
+//         md5.md5_string(argv[2], strlen(argv[2]));
+//     }
+//     else if(argc == 3 && strcmp(argv[1], "-b")==0)
+//     {
+//         char tmp[100] = {0};
+//         int len = strlen(argv[2]);
+//         for (int i=0;i<len/2;i++)
+//         {
+//             if (argv[2][i*2] >='0' && argv[2][i*2] <='9')
+//                 tmp[i] += argv[2][i*2] -'0';
+//             else 
+//                 tmp[i] += argv[2][i*2] -'A' + 10;
+
+//             tmp[i] *= 16;
+
+//             if (argv[2][i*2+1] >='0' && argv[2][i*2+1] <='9')
+//                 tmp[i] += argv[2][i*2+1] -'0';
+//             else 
+//                 tmp[i] += argv[2][i*2+1] -'A' + 10;
+//         }
+//         // md5_string(argv[2], strlen(argv[2]));
+//         md5.md5_string(tmp, len/2);
+//     }
+//     else if(argc == 1)
+//     {
+//         char * para[1] = {arg};
+//         in_args(1, para);
+//         // md5_file(arg);
+//         md5.md5_file(arg);
+//     }
+//     else
+//     {
+//         printf("invalid args!\n");
+//     }
+//     //getchar();
+//     //system("pause > null");
+//     return 0;
+// }
 
 
 // #define MAX_DEPTH 31
