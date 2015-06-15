@@ -5,10 +5,18 @@
 typedef int (*G_CB)(std::string &key, void*value, int v_type, void *ud, void **next_cb, void **next_ud);
 typedef int (*read_fun)(char *buf, int len);
 
-#define T_STR 0
-#define T_INT -1
-#define T_DIC -2
-#define T_LST -3
+#define T_STR_D 0
+#define T_INT_D -1
+#define T_DIC_D -2
+#define T_LST_D -4
+
+#define T_INT_L -6
+#define T_STR_L -7
+#define T_DIC_L -8
+#define T_LST_L -9
+
+#define T_DIC_E -3
+#define T_LST_E -5
 
 class bson_parser
 {
